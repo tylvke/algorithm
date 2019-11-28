@@ -1,0 +1,43 @@
+css、
+    1、当内容不足时底部栏在页面最底部，当内容超过一屏时底部栏顶到下面
+    2、BFC及应用
+    3、盒子布局
+    4、flex
+    5、css3动画
+js 
+    基本数据类型，typeof instanceof Object.prototype.toString 的区别
+    1、数组：
+        var arr = [1,2,[3,4,[5,[6]]]]展开数组，js实现展开数组
+        随机数组、数组新方法、flat展开数组，数组改变影响以前数组问题，如何将一个类数组转换为数组
+    2、url格式化
+    3、正则 
+        const urls = [
+            'api/user/{id}',
+            'api/detail/{id}',
+        ]
+        const url = 'api/user/1';
+
+        判断url是否在urls中
+    4、lazyMan实现 eventloop
+    5、obj={
+        a:{
+            b:{
+                c:1
+            }
+        }
+    }
+    获取a.b.c的值
+    6、promise手动实现，promise.all 错误处理
+    7、repeat(repeat(fn,num,timer)) 执行fn num次，每timer执行一次
+    8、es6 新属性 例decorator并实现一个高阶组件，权限问题
+    9、组件库如何设计、实现一个组件、form系列组件如何设计，数据获取，验证
+    10、webpack配置
+        本地模拟线上操作，mock数据，代理接口，多个需求接口在不同域名时在不重新启动的情况下如何访问，打包优化
+    11、从数组中取出几个数相加等于某个值的组合
+    12、localstorage实现过期功能
+    13、git如何删除某个提交，当删除后，在其他分支重新合并后无法合并怎么解决 git revert
+    14、typescript的了解，写一个泛型类
+    15、v-model原理，和vuex冲突时怎么解决，methods，computed，watch什么时候适用，怎么添加一个新属性会出发更新吗，为什么，怎么解决，
+        组件通信，vuex介绍，重复的actions、mutations怎么优化
+    16、vue双向绑定实现，虚拟dom，diff，数组监听，proxy
+    17、怎么做的重构
