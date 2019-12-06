@@ -1,0 +1,8 @@
+react优势：react是js的扩展可以使用任何js最新语法，vue提供更多的api来实现，有些语法无法使用，react只负责渲染，vue提供一整套
+    1、import可以直接用，vue还要注册
+    2、jsx是js的扩展更灵活，逻辑更加清晰，vue使用更多指令
+    3、同一个页面不同模块react可以拆成不同方法，vue只能使用指令在模板里
+    4、react api更少，更灵活，vue更多的语法api
+    5、react向子组件传至时无需像vue一样注册接收
+    6、react可以使用新的语法如descridator，和typescript更好的结合，
+    7、react开发思想更先进，引领潮流、vue在跟进
