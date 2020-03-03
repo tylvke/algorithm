@@ -4,6 +4,7 @@ css、
     3、盒子布局
     4、flex
     5、css3动画
+    6、css管理方式规范，避免命名污染 命名空间 + BEM 规范，CSS in JS，CSS Modules
 js 
     基本数据类型，typeof instanceof Object.prototype.toString 的区别
     1、数组：
@@ -29,15 +30,20 @@ js
     获取a.b.c的值
     6、promise手动实现，promise.all 错误处理
     7、repeat(repeat(fn,num,timer)) 执行fn num次，每timer执行一次
-    8、es6 新属性 例decorator并实现一个高阶组件，权限问题
+    8、es6 新属性 例decorator并实现一个高阶组件
     9、组件库如何设计、实现一个组件、form系列组件如何设计，数据获取，验证
     10、webpack配置
-        本地模拟线上操作，mock数据，代理接口，多个需求接口在不同域名时在不重新启动的情况下如何访问，打包优化
+        本地模拟线上操作，mock数据，代理接口，多个需求接口在不同域名时在不重新启动的情况下如何访问，打包优化，webpack懒加载实现方式
     11、从数组中取出几个数相加等于某个值的组合
     12、localstorage实现过期功能
     13、git如何删除某个提交，当删除后，在其他分支重新合并后无法合并怎么解决 git revert
     14、typescript的了解，写一个泛型类
     15、v-model原理，和vuex冲突时怎么解决，methods，computed，watch什么时候适用，怎么添加一个新属性会出发更新吗，为什么，怎么解决，
-        组件通信，vuex介绍，重复的actions、mutations怎么优化
-    16、vue双向绑定实现，虚拟dom，diff，数组监听，proxy
+        组件通信，vuex介绍，重复的actions、mutations怎么优化,provide和inject,keep-alive组件理解，next-tick
+    16、vue虚拟dom，diff，数组监听，事件解析this如何绑定,computed实现，defineproperty、proxy的不同
     17、怎么做的重构
+    18、事件代理实现（eventDelegate）
+    19、模块化历程
+    20、如何实现按钮级别的权限（provide和inject）
+    21、如果项目中相同依赖怎么解决，每一个多要创建node_modules吗（yarn workspace, lerna）
+    22、react hooks 优点

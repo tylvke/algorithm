@@ -1,7 +1,7 @@
 function getAllCombin(array, n, sum, temp) {
     if (temp.length === n) {
-      if (temp.reduce((t, c) => t + c) === sum) {
-        return temp;
+      if (temp.reduce((t, c) => t + c,0) === sum) {
+        console.log(temp)
       }
       return;
     }
@@ -17,5 +17,6 @@ function getAllCombin(array, n, sum, temp) {
     }
   }
   const arr = [1, 2, 3, 4, 5, 6];
-
-  console.log(getAllCombin(arr, 3, 10, []));
+  for(let i = 0;i<arr.length;i++){
+    getAllCombin(arr, i, 5, []);
+  }

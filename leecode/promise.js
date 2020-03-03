@@ -30,6 +30,21 @@ Promise.prototype.reject=function (data) {
     console.log(data);
 }
 
+Promise.prototype.all=function (param,cb) {
+    var self=this;
+    self.res=[];
+    self.count=param.length;
+    for(let i=0;i<param.length;i++){
+        param[i](function (data) {
+            self.res[i]=data;
+            self.count-=1;
+            if(self.count===0){
+                cb && cb.apply(self,self.res);
+            }
+        })
+    }
+}
+
 function getSex(sex) {
     return new Promise(function (resolve,reject) {
         resolve(sex)

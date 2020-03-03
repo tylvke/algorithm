@@ -1,6 +1,3 @@
-/**
- * Created by wangshuo on 2017/3/7.
- */
 function fun(n,o) {
     console.log(o)
     return {
@@ -21,3 +18,12 @@ var c = fun(0).fun(1);  c.fun(2);  c.fun(3);//undefined,0,1,1
 // n()
 // n()
 // n()
+
+function A(a) {
+    A=function (b) {
+        return a+b++;
+    }
+    return a++;
+}
+console.log(A(1))
+console.log(A(2))
