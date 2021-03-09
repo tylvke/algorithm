@@ -2,11 +2,11 @@
  * Created by wangshuo on 2017/2/19.
  */
 function Promise(fn) {
-    this.fn=fn;
+    this.status = 'PENDING';
     this.doneList=[];
     var self=this;
     setTimeout(function () {
-        self.fn(self.resolve.bind(self),self.reject.bind(self));
+        fn(self.resolve.bind(self),self.reject.bind(self));
     },0)
 }
 
@@ -19,14 +19,17 @@ Promise.prototype.then=function (resolve,reject) {
 }
 
 Promise.prototype.resolve=function (data) {
-    var resolve=this.doneList.shift().resolve;
-    var temp=resolve(data);
-    if(temp instanceof Promise){
-        temp.doneList=this.doneList;
+    if(this.status!=='PENDING') return;
+    this.status = 'FULFILLED';
+    var fn;
+    while(fn=this.doneList.shift()) {
+        data = fn.resolve(data)
     }
 }
 
 Promise.prototype.reject=function (data) {
+    if(this.status!=='PENDING') return;
+    this.status = 'FULFILLED';
     console.log(data);
 }
 
@@ -45,20 +48,17 @@ Promise.prototype.all=function (param,cb) {
     }
 }
 
-function getSex(sex) {
+function getAge(age) {
     return new Promise(function (resolve,reject) {
-        resolve(sex)
+        resolve(age)
     })
 }
 
-getSex("男").then(function (data) {
-    console.log(data)
-    return getSex(data+"1");
-},function (data) {
-    console.log(data)
+getAge(1).then(function (data) {
+    return data + 1;
 }).then(function (data) {
-    console.log((data))
-},function (data) {
+    return data + 1;
+}).then(function (data) {
     console.log(data)
 });
 

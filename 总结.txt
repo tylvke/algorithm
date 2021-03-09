@@ -1,3 +1,13 @@
 1、泛型的关键目的是在成员之间提供有意义的约束,为代码增加抽象层和提升可重用性
 2、SyntheticEvent 是合并而来。这意味着 SyntheticEvent 对象可能会被重用，
 而且在事件回调函数被调用后，所有的属性都会无效。出于性能考虑，你不能通过异步访问事件。
+useCallback, useMeme 怎么相互转化
+function useMemo<T>(factory: () => T, deps: ReadonlyArray<any> | undefined): T;
+function useCallback<T extends (...args: any[]) => any>(callback: T, deps: DependencyList): T;
+Recoil，hox
+前端有哪几种架构
+object.create
+fiber对象区别，优先级
+
+1、fetch()返回的promise将不会拒绝http的错误状态，即使响应是一个HTTP 404或者500 
+2、在默认情况下 fetch不会接受或者发送cookies

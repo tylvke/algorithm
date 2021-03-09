@@ -49,4 +49,4 @@ function inOrder(node) {
     inOrder(node.right);
   }
 }
-inOrder(data);
+inOrder(tree);

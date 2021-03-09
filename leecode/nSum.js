@@ -9,9 +9,9 @@ function getAllCombin(array, n, sum, temp) {
       const current = array.shift();
       temp.push(current);
       const result = getAllCombin(array, n, sum, temp);
-      if (result) {
-        return result;
-      }
+      // if (result) {
+      //   return result;
+      // }
       temp.pop();
       array.push(current);
     }

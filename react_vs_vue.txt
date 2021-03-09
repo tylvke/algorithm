@@ -6,3 +6,8 @@ react优势：react是js的扩展可以使用任何js最新语法，vue提供更
     5、react向子组件传至时无需像vue一样注册接收
     6、react可以使用新的语法如descridator，和typescript更好的结合，
     7、react开发思想更先进，引领潮流、vue在跟进
+
+区别
+    1、vue为mvvm，react为组件化框架
+    2、vue双向数据流、可变，react单向数据流，不可变
+    3、vue渐进式框架更多api、react更灵活

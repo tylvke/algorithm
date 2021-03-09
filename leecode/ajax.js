@@ -117,7 +117,7 @@ var obj={
     a:11,
     change:(function(){
         this.a=19;
-    }())
+    })()
 }
 obj.change()
 console.log(obj.a)
